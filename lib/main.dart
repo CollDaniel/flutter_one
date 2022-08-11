@@ -1,19 +1,30 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'
+    show
+        AppBar,
+        BuildContext,
+        Colors,
+        Key,
+        MaterialApp,
+        Scaffold,
+        State,
+        StatefulWidget,
+        StatelessWidget,
+        Text,
+        ThemeData,
+        Widget,
+        runApp;
 import 'description_place.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Demos',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -50,9 +61,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-  String descriptionDummy = "Lorem ipsum dolor sit amet, consecteuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pelientesque eu.";
-
+  String descriptionDummy =
+      "Lorem ipsum dolor sit amet, consecteuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pelientesque eu.";
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar const title.
         title: Text(widget.title),
       ),
-      body: new DescripcionPlace("Daniel Coll", 4, descriptionDummy),
+      body: DescripcionPlace("Daniel Coll", 4, descriptionDummy),
     );
   }
 }
