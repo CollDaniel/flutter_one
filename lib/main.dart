@@ -4,8 +4,10 @@ import 'package:flutter/material.dart'
         BuildContext,
         Colors,
         Key,
+        ListView,
         MaterialApp,
         Scaffold,
+        Stack,
         State,
         StatefulWidget,
         StatelessWidget,
@@ -14,6 +16,8 @@ import 'package:flutter/material.dart'
         Widget,
         runApp;
 import 'description_place.dart';
+import 'reviews_list.dart';
+import 'gradient_back.dart';
 
 void main() => runApp(const MyApp());
 
@@ -73,12 +77,16 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar const title.
-        title: Text(widget.title),
+      //body: DescripcionPlace("Daniel Coll", 4, descriptionDummy),
+      body: Stack(
+        children: [
+          ListView(children: [
+            DescripcionPlace("Daniel Coll", 4, descriptionDummy),
+            const ReviewList(),
+          ]),
+          const GradientBack(),
+        ],
       ),
-      body: DescripcionPlace("Daniel Coll", 4, descriptionDummy),
     );
   }
 }
