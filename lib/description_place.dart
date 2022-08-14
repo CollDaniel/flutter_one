@@ -4,6 +4,7 @@ import 'package:flutter/material.dart'
         Color,
         Column,
         Container,
+        CrossAxisAlignment,
         EdgeInsets,
         FontWeight,
         Icon,
@@ -15,6 +16,7 @@ import 'package:flutter/material.dart'
         TextStyle,
         Widget;
 import 'package:flutter/src/foundation/key.dart';
+import 'button_purple.dart';
 
 class DescripcionPlace extends StatelessWidget {
   String namePlace;
@@ -105,9 +107,11 @@ class DescripcionPlace extends StatelessWidget {
     );
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         titleStars,
         description,
+        ButtonPurple('Navigate'),
       ],
     );
   }

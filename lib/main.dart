@@ -18,6 +18,7 @@ import 'package:flutter/material.dart'
 import 'description_place.dart';
 import 'reviews_list.dart';
 import 'gradient_back.dart';
+import 'header_appbar.dart';
 
 void main() => runApp(const MyApp());
 
@@ -84,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
             DescripcionPlace("Daniel Coll", 4, descriptionDummy),
             const ReviewList(),
           ]),
-          const GradientBack(),
+          const HeaderAppBar(),
         ],
       ),
     );
