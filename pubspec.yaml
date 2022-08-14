@@ -89,7 +89,7 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-    - assets\img\photo-1592727995117-4cdc7ee6fcb4.jpg
+    - assets\img\foto.jpg
 
   fonts:
     - family: Lato

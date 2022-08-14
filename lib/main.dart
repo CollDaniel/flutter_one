@@ -15,10 +15,9 @@ import 'package:flutter/material.dart'
         ThemeData,
         Widget,
         runApp;
-import 'description_place.dart';
 import 'reviews_list.dart';
-import 'gradient_back.dart';
 import 'header_appbar.dart';
+import 'platzi_trips.dart';
 
 void main() => runApp(const MyApp());
 
@@ -42,7 +41,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: const MyHomePage(title: 'Hello World'),
+      home: PlatziTrips(),
     );
   }
 }
@@ -66,9 +65,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String descriptionDummy =
-      "Lorem ipsum dolor sit amet, consecteuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pelientesque eu.";
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -81,9 +77,8 @@ class _MyHomePageState extends State<MyHomePage> {
       //body: DescripcionPlace("Daniel Coll", 4, descriptionDummy),
       body: Stack(
         children: [
-          ListView(children: [
-            DescripcionPlace("Daniel Coll", 4, descriptionDummy),
-            const ReviewList(),
+          ListView(children: const [
+            ReviewList(),
           ]),
           const HeaderAppBar(),
         ],
